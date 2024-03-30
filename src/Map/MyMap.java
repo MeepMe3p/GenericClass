@@ -1,7 +1,6 @@
 package Map;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class MyMap <Key, Value>{
     ArrayList<Key> keys = new ArrayList<>();

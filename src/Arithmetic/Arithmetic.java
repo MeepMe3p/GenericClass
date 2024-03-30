@@ -9,42 +9,44 @@ public class Arithmetic <T1 extends Number, T2 extends Number> {
         this.second_num = second_num;
     }
 
-    public void add(){
-//        double res = first_num + second_num;
+    public Number add(){
+
         System.out.print(first_num+" + "+second_num+" = ");
-        System.out.println(first_num.doubleValue()+ second_num.doubleValue());
+        return first_num.doubleValue() + second_num.doubleValue();
+
     }
-    public void subtract(){
+    public Number subtract(){
         System.out.print(first_num+" - "+second_num+" = ");
-        System.out.println(first_num.doubleValue() - second_num.doubleValue());
+        return first_num.doubleValue() - second_num.doubleValue();
     }
-    public void multiply(){
+    public Number multiply(){
         System.out.print(first_num+" * "+second_num+" = ");
-        System.out.println( first_num.doubleValue()*second_num.doubleValue());
+        return first_num.doubleValue() * second_num.doubleValue();
+
     }
-    public void divide(){
+    public Number divide(){
         System.out.print(first_num+" / "+second_num+" = ");
         try{
-            System.out.println(first_num.doubleValue()/second_num.doubleValue());
+            return first_num.doubleValue() / second_num.doubleValue();
         }catch (ArithmeticException e){
             System.err.println("Cant dividde by zero");
         }
-
+        return 0;
     }
-    public void getMin(){
+    public Number getMin(){
         System.out.print("Minimum is: ");
         if(first_num.doubleValue() >= second_num.doubleValue()){
-            System.out.println(first_num);
+            return second_num;
         }else{
-            System.out.println(second_num);
+            return first_num;
         }
     }
-    public void getMax(){
+    public Number getMax(){
         System.out.print("Maximum is: ");
         if(first_num.doubleValue() <= second_num.doubleValue()){
-            System.out.println(first_num);
+            return second_num;
         }else{
-            System.out.println(second_num);
+            return first_num;
         }
     }
 }

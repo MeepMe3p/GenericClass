@@ -1,18 +1,16 @@
 import Arithmetic.Arithmetic;
 
-import java.util.HashMap;
-import java.util.Map;
 import Map.MyMap;
 
 public class Main {
     public static void main(String[] args) {
         Arithmetic<Double,Integer> arithmetic = new Arithmetic<>(3.2,5);
-        arithmetic.add();
-        arithmetic.subtract();
-        arithmetic.multiply();
-        arithmetic.divide();
-        arithmetic.getMin();
-        arithmetic.getMax();
+        System.out.println(arithmetic.add());
+        System.out.println(arithmetic.subtract());
+        System.out.println(arithmetic.multiply());
+        System.out.println(arithmetic.divide());
+        System.out.println(arithmetic.getMin());
+        System.out.println(arithmetic.getMax());
 
         System.out.println("===================================================================================");
 
